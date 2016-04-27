@@ -1,0 +1,1016 @@
+﻿body {						/* Данные, общие для всей странички */
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	min-width: 960px;
+	background: #111 url("../img/-index/bg2.jpeg") no-repeat center top;
+}
+
+body.item, body.inner_page {					/* Страничка Прайс */
+	background: #f8f5f2 url("../img/-item/block_bg.jpeg") repeat center top;
+	color: #000;
+}
+
+.container {         /* Общий контейнер шириной 940px */
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main-container {
+	margin: 45px auto;
+	margin-bottom: 84px;
+	padding: 0 10px;
+}
+
+.clearfix:after {    /* Класс CLEARFIX */
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Хедер ----------------------------------------------------------*/
+.main-header {          /* Хедер */
+	margin-top: 0px;
+	margin-bottom: 60px;
+	background: #000;
+}
+
+.main-navigation {     /* Меню хедера */
+	float: left;
+	width: 810px;
+}
+
+.user-block {          /* Пользовательский блок */
+	float: right;
+	max-width: 140px;
+}
+
+.main-navigation ul {   /* Список меню хедера */
+	margin: 0;
+	padding: 0;
+	font-size: 0;  /* борьба с пробелами в инлайн-блоках! */
+	list-style: none;
+}
+
+.main-navigation li {    /* Элементы списка меню хедера */
+	display: inline-block;
+	font-size: 16px;
+	line-height: 20px;
+	vertical-align: top;
+}
+
+.main-navigation a {    /* Ссылки в меню хедера */
+	display: block;
+	padding: 25px 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.main-navigation a:hover {   /* Ссылки при наведении */
+	background: #242424;
+	cursor: pointer;
+}
+
+.main-navigation .active a {  /* Активная ссылка меню хедера */
+	position: relative;
+}
+
+.main-navigation .active a:hover {  /* Активная ссылка меню хедера при наведении */
+	background: none;
+	cursor: default;
+}
+
+.main-navigation .active a:after {  /* Псевдоэлемент активной ссылки меню хедера */
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	right: 20px;
+	height: 5px;
+	background: white;
+}
+
+.login {                     /* Ссылка пользовательского блока */
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding: 25px 20px;
+	padding-left: 50px;
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.login:hover {             /* Ссылка пользовательского блока при наведении*/
+	background: #242424;
+}
+
+.login:before {            /* Псевдоэлемент (картинка)ссылки пользовательского блока */
+	content: "";
+	position: absolute;
+	top: 28px;
+	left: 20px;
+	width: 18px;
+	height: 16px;
+	background: url("../img/-index/icon_enter.png") no-repeat;
+	/*background-position: 0 -212px;*/
+}
+
+.login:hover:before {											/* Псевдоэлемент (картинка)ссылки пользовательского блока при наведении */
+	background: url("../img/-index/icon_enter2.png") no-repeat;
+}
+
+/*-------------------------------------------------------------*/
+.logo {					/* Логотип */
+	width: 368px;
+	height: 152px;
+	margin: 0 auto;
+	margin-bottom: 77px;
+}
+
+.logo img {				/* Логотип (картинка) */
+	width: 368px;
+	height: 152px;
+}
+
+.slogan {				/* Слоган (из 3 колонок) */
+	margin-bottom: 80px;
+}
+
+.slogan-item {			/* Колонки слогана */
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.slogan-item:last-child {		/* Последняя колонка слогана */
+	margin-right: 0;
+}
+
+.slogan-title {					/* Заголовки слоганов */
+	position: relative;
+	padding-bottom: 50px;
+	margin-bottom: 30px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.slogan-item p {					/* Текст слоганов */
+	margin: 10px;
+}
+
+.slogan-title:after {			/* Псевдоэлемент после заголовка слоганов */
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	background: #fff;
+	transform: rotate(45deg);
+}
+
+.index-content {						/* Белые окошки */
+	margin-bottom: 35px;
+	padding: 50px 80px;
+	color: #000;
+	background:
+				url("../img/-index/vert_line.png") no-repeat center,
+				#f8f5f2 url("../img/-index/block_bg.jpeg");
+}
+
+.index-content-column-left {			/* Левая колонка окошка */
+	width: 350px;
+}
+
+.index-content-column-right {			/* Правая колонка окошка */
+	width: 300px;
+}
+
+.index-content-column-left {			/* Левая колонка окошка */
+	float: left;
+}
+
+.index-content-column-right {			/* Правая колонка окошка */
+	float: right;
+}
+
+.index-content-column-title {			/* Заголовок колонки */
+	margin: 0;
+	margin-bottom: 35px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.news {							/* Блок новостей в левой колонке */
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.news li {						/* Элементы блока новостей */
+	margin-bottom: 25px;
+}
+
+.news time {						/* Дата в блоке новостей */
+	text-transform: none;
+	font-weight: normal;
+}
+
+.news a {
+	text-decoration: none;
+	color: #000;
+}
+
+.btn {							/* Класс .BTN кнопок */
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 33px;
+	margin-right: 16px;
+	font-size: 14px;
+	font-family: "PT Sans Narrow", sans-serif;
+	font-weight: 700;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background: #000;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {					/* Поведение кнопок по наведению и нажатию */
+	background: #663d15;
+}
+
+.btn:disabled {					/* ПОведение неактивных (отключенных) кнопок */
+	cursor: default;
+	opacity: .5;
+}
+
+.btn:disabled:hover {			/* Поведение неактивных кнопок при наведении */
+	background: #000;
+}
+
+.main-contacts .btn {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.main-contacts .btn:last-child {
+	margin-right: 0;
+}
+
+.gallery{						/* Блок галареи в правой колонке */
+	position: relative;
+	height: 260px;
+}
+
+.gallery-image {					/*  */
+	height: 164px;
+	margin: 0;
+	border: 7px solid white;
+	background: #ccc;
+}
+
+.gallery-image img {				/* Изображение в блоке галереи */
+	width: 286px;
+	height: 164px;
+}
+
+.gallery .btn {					/* Кнопки в блоке галереи */
+	position: absolute;
+	bottom: 0;
+	width: 140px;
+	margin: 0;
+}
+
+.gallery-prev {					/* Кнопка НАЗАД в блоке галереи */
+	left: 0;
+}
+
+.gallery-next {					/* Кнопка ВПЕРЕД в блоке галереи */
+	right: 0;
+}
+
+.content p {						/* Абзац в левой колонке второго белого окошка */
+	margin: 0;
+	margin-bottom: 25px;
+}
+
+.form  input {						/* Форма в правой колонке второго окошка */
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 106px;
+	padding: 10px 15px;
+	border: 2px solid #000;
+	font-family: "PT Sans Narrow", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #000;
+	background: #f9f6f3;
+	outline: none;
+}
+
+.form  input:focus {					/* Поля ввода формы при фокусе на них */
+	border: 2px solid #663d15;
+}
+
+.form  input:nth-child(even) {			/* Четные поля ввода формы */
+	margin-right: 0;
+}
+
+.form .btn {							/* Кнопки формы */
+	clear: both;
+	width: 100%;
+}
+
+/* Пагинатор (внутренние странички) -----------------------------*/
+.paginator {								/* Пагинатор */
+	max-width: 700px;
+	margin: 0;
+	margin-bottom: 35px;
+}
+
+.paginator ul {   /* Список меню пагинатора */
+	margin: 0;
+	padding: 0;
+	font-size: 0;  /* борьба с пробелами в инлайн-блоках! */
+	list-style: none;
+}
+
+.paginator li {    /* Элементы списка меню пагинатора */
+	display: inline;			/* inline-block  не нужен! */
+	font-size: 14px;
+	line-height: 20px;
+	vertical-align: top;
+}
+
+.paginator a {    /* Ссылки в меню пагинатора */  
+	padding: 10px 0px;
+	padding-right: 40px;
+
+	position: relative;
+	text-decoration: none;
+	color: #000;
+}
+
+.paginator li.active a:after {		/* Скрыть псевдоэлемент активной ссылки пагинатора (как вариант) */
+	display: none;
+}
+
+.paginator a:after {		/* Псевдолементы ссылок пагинатора. */
+	content: "";
+	display: block;
+	position: absolute;
+	top: 15px;
+	right: 15px;    				
+	width: 8px;
+	height: 8px;
+	background-color: #000;
+	transform: rotate(45deg);
+}
+
+.paginator a:hover:after {			/* При наведении на псевдоэлемент курсор "не сигналит" о ссылке */
+	cursor: default;
+}
+
+.paginator a:hover {   /* Ссылки пагинатора при наведении */
+	cursor: pointer;
+}
+
+.paginator .active a {  /* Активная ссылка меню пагинатора */
+	position: relative;
+	color: #aba9a7;					
+}
+
+.paginator .active a:hover {  /* Активная ссылка меню пагинатора при наведении */
+	background: none;
+	cursor: default;
+}
+
+/* Стили странички "Страничка товара" (item) -----------------------------*/
+.item .main-header {
+	background: #000;
+	color: #fff;
+	margin-bottom: 55px;
+}
+
+.item  h1 {
+	margin: 0;
+	margin-bottom: 21px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.item .paginator {
+	margin-bottom: 55px;
+}
+
+.item .main-footer {
+	background: #252525 url("../img/-index/footer_bg.jpeg");
+	color: #fff;
+}
+
+.item .content-column-left {					/* Левый блок (картинки) */
+	width: 480px;
+	float: left;
+}
+
+.main_caption {							/* Большая картинка */
+	float: left;
+	padding-bottom: 13px;	/* ...Исправить. Если падинг указать 20 рх, то вылезает на деле почему-то больше (7рх лишние)... */
+}
+
+/*.caption a:active .main_caption img{					/ такое не  работает... /
+	background: url("img/-item/big_image.jpeg") no-repeat;
+}*/
+
+.main_caption img, .caption img {		/* Тень изображениям (большому и двум маленьким) */
+	box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.caption:last-child  img{		/* Тень изображению (последнему из маленьких) */
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+.caption {
+	float: left;	
+	padding-right: 20px;
+}
+
+.caption:last-child {	
+	padding-right: 0;
+}
+
+.caption:last-child :after {
+	clear: both;
+}
+
+.item .content-column-right {					/* Правый блок (текстовый) */
+	width: 390px;
+	float: right;
+}
+
+.item .content-column-right .btn {
+	padding: 10px 18px;
+	margin-right: 0px;
+}
+
+.item .content-column-right a {
+	text-decoration: none;
+	color: #000;
+}
+
+.item .content-column-right .art {
+	color: #aeaeae;
+}
+
+.item .text_box p {
+	margin-bottom: 38px;
+}
+
+.item .text_box h3 {
+	margin-top: 65px;
+	margin-bottom: 33px;
+}
+
+.item .content-column-right ul {			/* content-column-right заменить на класс list!.. */
+	margin: 0;
+    padding: 0;
+	list-style: none;
+	margin-top: 29px;
+	margin-left: 21px;
+}
+
+.item .content-column-right li {			/* и тут... */
+	position: relative;
+}
+
+.item .content-column-right li:before {		/* и тут... */  /* и где-то еще в 1 месте... */
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: -18px;    				/* Хотя по идее 21рх... */
+	width: 8px;
+	height: 8px;
+	background-color: #000;
+	transform: rotate(45deg);	
+}
+ 
+.price {
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 41px;
+	margin-right: -3px;
+	font-size: 14px;
+	font-family: "PT Sans Narrow", sans-serif;
+	font-weight: 700;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	border: none;
+	outline: none;
+	cursor: default;
+	color: #000;
+	background-color: #e5e5e5;
+}
+
+.footnotes {
+	margin-top: 33px;
+	margin-bottom: 33px;
+}
+
+.availability {
+	float: left;
+}
+
+.art {
+	float: right;
+	padding-right: 12px;
+}
+
+/* Стили странички Прайс (inner-page) ------------------------------------------------- */
+.inner_page .main-header {
+	background: #000;
+	color: #fff;
+	margin-bottom: 55px;
+}
+
+.inner_page .main-footer {
+	background: #252525 url("../img/-index/footer_bg.jpeg");
+	color: #fff;
+}
+
+.inner_page .main-container {
+	margin-bottom: 79px;
+}
+
+.inner_page .main-navigation li:first-of-type  a, .item .main-navigation li:first-of-type  a {
+	padding: 21px 20px;
+}
+
+.inner-page-title {
+	margin-bottom: 57px; /*можно и 55рх*/
+}
+
+.inner-page-title h1 {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 19px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.inner-content {
+	margin-bottom: 79px;
+}
+
+.inner-content h2 {
+	margin-top: 60px;
+	margin-bottom: 32px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.inner-content p {
+	margin: 14px 0;
+}
+
+.inner-content table {
+	border-collapse: collapse;
+}
+
+.inner-content td {
+	padding: 10px 15px;
+	border: 2px solid black;
+}
+
+.big-header {
+	margin-top: 57px;
+	margin-bottom: 58px;  
+	text-align: center;
+}
+
+.big-header h2 {
+	position: relative;
+	display: inline;
+	margin: 0;
+	padding: 0 25px;  
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	background: #f8f5f2 url("../img/-item/block_bg.jpeg") repeat;
+}
+
+.big-header:after {
+	content: ""; 
+	position: relative;
+	top: -25px;
+	z-index: -1;  
+	display: block;
+	border-bottom: 2px solid black;
+}
+.list-1 {
+	margin: 14px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.list-1 li {
+	position: relative;
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
+
+.list-1 li:before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 8px;
+	height: 8px;  
+	background: #000;
+	transform: rotate(45deg);
+}
+
+.prices-table {
+	width: 100%;
+}
+
+.prices-table td {
+    width: 50%;
+}
+
+.prices-table td:last-child {
+	text-align: center;
+}
+
+.short-text {
+	padding-right: 80px;
+}
+
+/* Колонки для контента */
+.inner-content-columns {
+    margin: 60px 0;
+	margin-bottom: 63px;
+}
+
+.inner-content-column-left,
+.inner-content-column-right {
+	width: 460px;
+}
+
+.inner-content-column-left {
+	float: left;
+}
+
+.inner-content-column-right {
+	float: right;
+}
+
+.inner-content-column-left *:first-child,
+.inner-content-column-right *:first-child {
+	margin-top: 0;
+}
+.inner-content-column-left *:last-child,
+.inner-content-column-right *:last-child {
+	margin-bottom: 0;
+}
+
+/* Футер -------------------------------------------------------*/
+.main-footer {						/* Футер */
+	margin-top: 60px;
+	padding-top: 60px;
+	padding-bottom: 40px;
+	background: #252525 url("../img/-index/footer_bg.jpeg");
+}
+
+.footer-contacts {					/* Блок контактов в футере */
+	float: left;
+	width: 320px;
+	margin-right: 80px;
+}
+
+.footer-contacts a {					/* Ссылки блока контактов футера ???*/
+	color: #fff;
+}
+
+.footer-social {						/* Блок социальных сетей футера */
+	float: left;
+	text-align: center;
+}
+
+.footer-copyright {					/* Блок копирайта футера */
+	float: right;
+	max-width: 320px;
+}
+
+.footer-contacts a:hover {			/* Ссылки блока контактов футера при наведении */
+	text-decoration: none;
+}
+
+.footer-social p {					/* Абзац блока соцсетей футера */
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.social-btn {						/* Социальные кнопки в футере */
+	margin: 0 2px;
+	display: inline-block;
+	vertical-align: top;
+	width: 43px;
+	height: 43px;
+	font-size: 0;
+	text-decoration: none;
+	background: #000 url("../img/sprite.png") no-repeat center;								/* Подключить спрайт и далее расставить координаты картинок! */
+}
+
+.social-btn:hover {						/* Социальные кнопки в футере при наведении */
+	background-color: #fff;
+}
+
+.social-btn-vk {						/* Социальная кнопка ВК футера */
+	background: #000 url("../img/-index/icon_vk.png") no-repeat center;
+	/*background-position: 9px -968px;*/
+}
+
+.social-btn-fb {						/* Социальная кнопка FB футера */
+	background: #000 url("../img/-index/icon_fb.png") no-repeat center;
+}
+
+.social-btn-inst {						/* Социальная кнопка INST футера */
+	background: #000 url("../img/-index/icon_inst.png") no-repeat center;
+}
+
+.social-btn-vk:hover {						/* Социальная кнопка ВК футера при наведении */
+	background: #fff url("../img/-index/icon_vk_b.png") no-repeat center;
+}
+
+.social-btn-fb:hover {						/* Социальная кнопка FB футера при наведении */
+	background: #fff url("../img/-index/icon_fb_b.png") no-repeat center;
+}
+
+.social-btn-inst:hover {						/* Социальная кнопка INST футера при наведении */
+	background: #fff url("../img/-index/icon_inst_b.png") no-repeat center;
+}
+
+.footer-copyright p {					/* Абзац блока копирайта футера */
+	margin: 0;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.footer-copyright .btn {					/* Кнопки блока копирайта футера */
+	margin-right: 0;
+}
+
+.footer-copyright .btn:hover {					/* Кнопки блока копирайта футера при наведении*/
+	color: #000;
+	background: #fff;
+}
+
+/* Модальное окно Вход ------------------------------------------ */
+.modal-window {
+	display: none;		/* display: none; */
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-top: 120px;
+	margin-left: -230px;
+	width: 300px;
+	padding: 50px 80px;
+	padding-bottom: 58px;
+	background: #f8f5f2 url("../img/-index/block_bg.jpeg") repeat;
+	color: #000;
+	box-shadow: 0 30px 50px rgba(0,0,0,.75);
+}
+
+.modal-window-close {		/* Кнопка Закрыть формы входа */
+	position: absolute;
+	top: 9px;
+	right: -34px;
+	width: 21px;
+	height: 21px;
+	background: url("../img/-index/close_window.png") no-repeat center;
+	font-size: 0;
+	cursor: pointer;
+}
+
+.modal-window h2 {			/* Заголовок */
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.modal-window p {			/* Абзац */
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.modal-window .login-form {		/* Форма */
+	
+}
+
+.login-form input[type="text"], .login-form input[type="password"] {	/* Поля формы входа (логин и пароль) */
+	width: 241px;
+	margin: 0;
+	margin-bottom: 9px;
+	padding: 12px 40px 12px 10px;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", sans-serif;
+	text-transform: uppercase;
+	color: #000;
+	border: 2px solid #000101;
+	outline: none;
+	background: #f9f6f3;
+}
+
+.login-form input:focus {				/* Фокус в поле ввода */
+	border-color: #663d15;
+}
+
+.login-form input.icon-user {			/* Иконка в поле Логин */
+	background: url("../img/-index/icon_login.png") no-repeat right 14px center;
+}
+
+.login-form input.icon-password {		/* Иконка в поле Пароль */
+	background: url("../img/-index/icon_pass.png") no-repeat right 14px center;
+}
+
+.login-form .restore {				/* Ссылка "Я забыл пароль" */
+	float:right;
+	color: #000;
+}
+
+.login-form .btn {					/* Кнопка формы */
+	width: 100%;
+	margin-top: 17px;
+}
+
+.login-form input[type="checkbox"] {	/* Чекбокс */
+	display: none;
+}
+
+.login-form input[type="checkbox"] + label{		/* Лейбл, привязанный к чекбоксу */
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding-left: 32px;
+	cursor: pointer;
+}
+
+.login-form input[type="checkbox"] + label:hover {		/* Лейбл при наведении */
+	color: #663d15;
+}
+
+.login-form input[type="checkbox"] + label:before {		/* Псевдоэлемент лейбла */
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	border: 2px solid #000;
+}
+
+.login-form input[type="checkbox"]:checked + label:before {		/* Псевдоэлемент при нажатом чекбоксе */
+	background: url("../img/-index/close_btn.png") no-repeat center;
+}
+
+.modal-content-map {
+	display: none;		/* display: none; */
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-top: 578px;
+	margin-left: -390px;
+	width: 766px;
+	height: 560px;
+	padding: 7px;
+	background-color: #fff;
+	color: #000;
+	box-shadow: 0 30px 50px rgba(0,0,0,.75);
+}
+
+.modal-content-close {		/* Кнопка Закрыть формы входа */
+	position: absolute;
+	top: 7px;
+	right: -32px;
+	width: 21px;
+	height: 21px;
+	background: url("../img/-index/close_window.png") no-repeat center;
+	font-size: 0;
+	cursor: pointer;
+	
+}
+
+@keyframes show {			/* Кадры анимации открытия Модального окна */
+  0% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-show {		/* Отображение модального окна */
+	display: block;
+	animation: show 1s;
+}
+
+@keyframes close {			/* Кадры анимации закрытия Модального окна */
+	0% {
+		transform: scale(1);
+		opacity: 1;		
+	}
+	60% {
+		transform: scale(0.9);	
+        opacity: 1;	
+	}
+	80% {
+		transform: scale(1.1);
+	}	
+	100% {
+		transform: scale(0);
+		opacity: 0;	
+	}		
+}
+
+.modal-close{						/* Закрытие модального окна */
+	animation: close .5s ease-in-out;
+}
+
+@keyframes error {			/* Кадры анимации ошибки Модального окна Вход */
+  0% {
+	opacity: 1;
+  }
+  50% {
+	box-shadow:  0 0 20px 30px rgba(255,0,0,0.7),
+				inset 0 0 10px 10px rgba(255,0,0,0.7);
+	opacity: 0.9;
+  }
+  100% {
+	opacity: 1;
+  }
+}
+
+.modal-error {		/* Ошибка входа (не хватает логина и/или пароля) */
+	animation: error 2s;
+}
+
+/*.modal-show-sec {			/* Альтернативное отображение модального окна */
+	/*display: block;
+	animation: modal-show-sec .5s ease-in-out;		
+}
+
+@keyframes modal-show-sec {		/* Кадры альтернативной анимации открытия Модального окна */
+	/*0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	60% {
+		transform: scale(1.1);	
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}*/
+
+.modal-container {
+	background-color: #aba9a7;
+	width: 100%; /*766px;*/
+	height: 100%; /*560px;*/
+	z-index: 1;
+}
+
+.map-image {
+	z-index: 2;
+}
