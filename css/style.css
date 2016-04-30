@@ -9,9 +9,14 @@
 	background: #111 url("../img/-index/bg2.jpeg") no-repeat center top;
 }
 
-body.item, body.inner_page {					/* Страничка Прайс */
+body.shop, body.item, body.inner_page {					/* Тело внутренних страниц */
 	background: #f8f5f2 url("../img/-item/block_bg.jpeg") repeat center top;
 	color: #000;
+}
+
+.shop .main-footer, .item .main-footer, .inner_page .main-footer {		/* Футер внутренних страниц */
+	background: #252525 url("../img/-index/footer_bg.jpeg");
+	color: #fff;
 }
 
 .container {         /* Общий контейнер шириной 940px */
@@ -338,28 +343,28 @@ body.item, body.inner_page {					/* Страничка Прайс */
 	width: 100%;
 }
 
-/* Пагинатор (внутренние странички) -----------------------------*/
-.paginator {								/* Пагинатор */
+/* Пагинатор Хлебные крошки (внутренние странички) -----------------*/
+.bread_crumbs {								/* Пагинатор Хлебные крошки */
 	max-width: 700px;
 	margin: 0;
 	margin-bottom: 35px;
 }
 
-.paginator ul {   /* Список меню пагинатора */
+.bread_crumbs ul {   /* Список меню пагинатора */
 	margin: 0;
 	padding: 0;
 	font-size: 0;  /* борьба с пробелами в инлайн-блоках! */
 	list-style: none;
 }
 
-.paginator li {    /* Элементы списка меню пагинатора */
+.bread_crumbs li {    /* Элементы списка меню пагинатора */
 	display: inline;			/* inline-block  не нужен! */
 	font-size: 14px;
 	line-height: 20px;
 	vertical-align: top;
 }
 
-.paginator a {    /* Ссылки в меню пагинатора */  
+.bread_crumbs a {    /* Ссылки в меню пагинатора */  
 	padding: 10px 0px;
 	padding-right: 40px;
 
@@ -368,11 +373,11 @@ body.item, body.inner_page {					/* Страничка Прайс */
 	color: #000;
 }
 
-.paginator li.active a:after {		/* Скрыть псевдоэлемент активной ссылки пагинатора (как вариант) */
+.bread_crumbs li.active a:after {		/* Скрыть псевдоэлемент активной ссылки пагинатора (как вариант) */
 	display: none;
 }
 
-.paginator a:after {		/* Псевдолементы ссылок пагинатора. */
+.bread_crumbs a:after {		/* Псевдолементы ссылок пагинатора. */
 	content: "";
 	display: block;
 	position: absolute;
@@ -384,28 +389,338 @@ body.item, body.inner_page {					/* Страничка Прайс */
 	transform: rotate(45deg);
 }
 
-.paginator a:hover:after {			/* При наведении на псевдоэлемент курсор "не сигналит" о ссылке */
+.bread_crumbs a:hover:after {			/* При наведении на псевдоэлемент курсор "не сигналит" о ссылке */
 	cursor: default;
 }
 
-.paginator a:hover {   /* Ссылки пагинатора при наведении */
+.bread_crumbs a:hover {   /* Ссылки пагинатора при наведении */
 	cursor: pointer;
 }
 
-.paginator .active a {  /* Активная ссылка меню пагинатора */
+.bread_crumbs .active a {  /* Активная ссылка меню пагинатора */
 	position: relative;
-	color: #aba9a7;					
+	color: #aba9a7;	
+	cursor: default;
+	pointer-events: none;	/* Отменяем события по клику */	
 }
 
-.paginator .active a:hover {  /* Активная ссылка меню пагинатора при наведении */
+.bread_crumbs .active a:hover {  /* Активная ссылка меню пагинатора при наведении */
 	background: none;
 	cursor: default;
 }
 
+/* Стили странички "Магазин" (shop) -----------------------------*/
+.shop .main-header {
+	margin-bottom: 54px;
+}
+
+.shop h1 {
+	margin-top: 0;
+	margin-bottom: 23px;
+}
+
+.shop .bread_crumbs {
+	margin-bottom: 54px;
+}
+
+.shop .bread_crumbs .active {
+	color: #aba9a7;
+	pointer-events: none;	/* Отменяем события по клику */	
+}
+
+.shop .bread_crumbs .active:after {
+	display: none;
+}
+
+.shop .left-part-form {
+	width: 200px;
+	float: left;
+}
+
+.shop .left-part-form h2 {
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 32px;
+}
+
+.shop .left-part-form input[type="radio"] {		/* Истинные радиокнопки */
+	display: none;
+}
+
+.shop .left-part-form input[type="radio"] + label {		/* Лейбл после радиокнопки */
+	display: inline-block;
+	vertical-align: middle;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000;
+	margin-left: 44px;
+	cursor: pointer;
+	margin-bottom: 23px;
+	position: relative;
+}
+
+.shop .left-part-form input[type="radio"] + label::before {	/* Псевдоэлемент лейбла, стоящего после радиокнопки */
+	content: "";
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	left: -44px;
+	top: 0;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 2px solid #000;
+}
+
+.shop .left-part-form input[type="radio"]:checked + label::before {	/* Псевдоэлемент лейбла, стоящего после  УСТАНОВЛЕННОЙ радиокнопки */
+	content: "";
+	position: absolute;
+	left: -42px;
+	top: 2px;
+	width: 8px;
+	height: 8px;
+	background-color: #000;
+	border-radius: 50%;
+	border: 4px solid #fff;
+	box-shadow: 0 0 0 2px rgba(0,0,0,1);
+}
+
+.shop .left-part-form input[type="checkbox"] {		/* Истинный чекбокс */
+	display: none;
+}
+
+.shop .left-part-form input[type="checkbox"] + label {	/* Лейбл после чекбокса */
+	display: inline-block;
+	vertical-align: middle;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000;
+	margin-left: 44px;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+.shop .left-part-form input[type="checkbox"] + label:last-child {		/* Пследний лейбл, стоящий после чекбокса */
+	margin-bottom: 0;
+}
+
+.shop .left-part-form input[type="radio"] + label:last-child {		/* Последний лейбл, стоящий после радиокнопки */
+	margin-bottom: 0;
+}
+
+.shop .left-part-form input[type="checkbox"] + label::before {		/* Псевдоэлемент лейбла, стоящего после чекбокса */
+	content: "";
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: -44px;
+	top: 0px;
+	border: 2px solid #000;
+}
+
+.shop .left-part-form input[type="checkbox"]:checked + label::before {	/* Псевдоэлемент лейбла, стоящего после УСТАНОВЛЕННОГО чекбокса */
+	content: "";
+	position: absolute;
+	left: -42px;
+	top: 2px;
+	width: 12px;
+	height: 12px;
+	background: url("../img/-shop/check_on.png") no-repeat center;
+	border: 2px solid #fff;
+	box-shadow: 0 0 0 2px rgba(0,0,0,1);
+}
+
+.shop .left-part-form .btn {
+	margin-right: 0;
+	margin-top: 30px;
+}
+
+.shop  .right-part-items .buy {					/* Кнопка в Форме */
+    display: inline-block;
+	width: 78px;
+    margin-right: 0;
+	vertical-align: top;
+	padding-top: 14px;
+	padding-bottom: 15px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background: #000;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.shop  .right-part-items .buy:hover, .shop  .right-part-items .buy:active {			/* Кнопка в форме при нажатии и наведении */
+	background-color: #663d15;
+}
+
+.shop .price  {
+	width: 109px;
+	padding: 15px 0;
+	padding-top: 14px;
+	margin-left: 16px;
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+
+.left-part-form .btn:hover, .left-part-form .btn:active {			/* Кнопка в форме при нажатии и наведении */
+	background-color: #663d15;
+}
+
+/* События элементов формы при НАВЕДЕНИИ */
+.left-part-form input[type="radio"] + label:hover, 						/* при наведении на лейблы */
+.left-part-form input[type="radio"]:checked + label:hover, 
+.left-part-form input[type="checkbox"] + label:hover,
+.left-part-form input[type="checkbox"]:checked + label:hover {
+	color: #663d15;
+}
+
+.left-part-form input[type="radio"] + label:hover::before, 				/* при наведении на "псевдо" радиобаттоны и чекбоксы */
+.left-part-form input[type="radio"]:checked + label:hover::before, 
+.left-part-form input[type="checkbox"] + label:hover::before,
+.left-part-form input[type="checkbox"]:checked + label:hover::before {	
+	color: #000; 
+}
+
+/* События элементов формы при БЛОКИРОВКЕ */
+.left-part-form input[type="radio"]:disabled + label,					/* лейблы при блокировке input[] */
+.left-part-form input[type="radio"]:checked:disabled + label, 
+.left-part-form input[type="checkbox"]:disabled + label,
+.left-part-form input[type="checkbox"]:checked:disabled + label {
+	color: #adaba9;
+}
+
+.left-part-form input[type="radio"]:disabled + label::before,			/* "псевдо-" радиобаттоны и чекбоксы при блокировке */
+.left-part-form input[type="radio"]:checked:disabled + label::before, 
+.left-part-form input[type="checkbox"]:disabled + label::before,
+.left-part-form input[type="checkbox"]:checked:disabled + label::before {
+	opacity:0.3;
+}
+.shop .right-part-items {
+	float: right;
+	width: 700px;
+}
+
+.shop .product-group {
+	width: 700px;
+}
+
+.shop .product-item {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+.shop .product-item:last-of-type {
+	margin-bottom: 45px;
+}
+
+.shop .product-item img {
+	margin-bottom: 15px;
+}
+
+.shop .product-item  h2 {
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 0;
+	margin-bottom: 15px;
+	margin-left: 16px;
+	text-transform: none;
+}
+
+.shop .product-item  span {
+	text-transform: uppercase;
+}
+
+.shop .product-item:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+.shop .container:nth-of-type(2) {
+	outline: 1px doted red;
+}
+
+.shop .main-footer {
+	margin-top: 49px;
+}
+
+/* Пагинатор (нумерация страниц) --------------------------------- */
+.paginator-list {
+	display: inline-block;
+    padding: 0;
+    margin: 0;
+	font-size: 0;
+	list-style:none;
+}
+
+.paginator-list li {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	margin-right: 7px;
+	vertical-align: middle;
+	background-color: #000;
+}
+
+.paginator-list .btn {
+	padding: 0;
+}
+
+.paginator-list a {
+	color: #fff;
+    text-decoration: none;
+	font-size: 14px;
+	line-height: 43px;
+}
+
+.paginator-list .active a {
+	color: #000;
+}
+
+.paginator-list  li:last-child {
+	margin-right: 0;
+}
+
+.paginator-list .active {
+    background-color: #fff;
+	cursor: default;
+	pointer-events: none;	/* Отменяем события по клику */
+}
+
+.paginator-list :hover:not(.active) {			/* События при НАВЕДЕНИИ у всех НЕ активных ссылок Пагинатора */
+	background-color: #663d15;
+}
+
+.paginator-list .active a{
+	background: none;
+}
+
+.paginator-list :hover a {
+	background: none;
+}
+
+.paginator-list :active a {
+	background: none;
+}
+
+.paginator-list :active:not(.active) {
+	background-color: #663d15;
+}
+
 /* Стили странички "Страничка товара" (item) -----------------------------*/
 .item .main-header {
-	background: #000;
-	color: #fff;
 	margin-bottom: 55px;
 }
 
@@ -416,13 +731,8 @@ body.item, body.inner_page {					/* Страничка Прайс */
 	line-height: 42px;
 }
 
-.item .paginator {
+.item .bread_crumbs {
 	margin-bottom: 55px;
-}
-
-.item .main-footer {
-	background: #252525 url("../img/-index/footer_bg.jpeg");
-	color: #fff;
 }
 
 .item .content-column-left {					/* Левый блок (картинки) */
@@ -546,21 +856,14 @@ body.item, body.inner_page {					/* Страничка Прайс */
 
 /* Стили странички Прайс (inner-page) ------------------------------------------------- */
 .inner_page .main-header {
-	background: #000;
-	color: #fff;
 	margin-bottom: 55px;
-}
-
-.inner_page .main-footer {
-	background: #252525 url("../img/-index/footer_bg.jpeg");
-	color: #fff;
 }
 
 .inner_page .main-container {
 	margin-bottom: 79px;
 }
 
-.inner_page .main-navigation li:first-of-type  a, .item .main-navigation li:first-of-type  a {
+.shop .main-navigation li:first-of-type  a, .inner_page .main-navigation li:first-of-type  a, .item .main-navigation li:first-of-type  a {
 	padding: 21px 20px;
 }
 
@@ -785,6 +1088,16 @@ body.item, body.inner_page {					/* Страничка Прайс */
 }
 
 /* Модальное окно Вход ------------------------------------------ */
+.blind {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.5;
+	background-color: black;
+	z-index: 1;
+}
+
 .modal-window {
 	display: none;		/* display: none; */
 	position: absolute;
@@ -798,6 +1111,9 @@ body.item, body.inner_page {					/* Страничка Прайс */
 	background: #f8f5f2 url("../img/-index/block_bg.jpeg") repeat;
 	color: #000;
 	box-shadow: 0 30px 50px rgba(0,0,0,.75);
+	
+	z-index: 10;
+	opacity: 1;
 }
 
 .modal-window-close {		/* Кнопка Закрыть формы входа */
@@ -939,6 +1255,10 @@ body.item, body.inner_page {					/* Страничка Прайс */
 .modal-show {		/* Отображение модального окна */
 	display: block;
 	animation: show 1s;
+}
+
+.blind-show {		/* Отображение затемнения окна */
+	display: block;
 }
 
 @keyframes close {			/* Кадры анимации закрытия Модального окна */
