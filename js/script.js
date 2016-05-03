@@ -36,7 +36,7 @@
 	});
 
 	
-	var modal_map = document.querySelector(".modal-content-map");
+	var modal_map = document.querySelector(".modal-content-map");		/* Открытие карты */
 	var close_window_map = modal_map.querySelector(".modal-content-close");
 	var open_map = document.getElementsByClassName("open-map");
 	for (var i = 0; i < open_map.length; i++) 
@@ -47,7 +47,7 @@
 		});
 	}
 	
-	close_window_map.addEventListener("click", function(event) {
+	close_window_map.addEventListener("click", function(event) {		/* Закрытие карты */
 	event.preventDefault();
 	modal_map.classList.remove("modal-show");
 	});
