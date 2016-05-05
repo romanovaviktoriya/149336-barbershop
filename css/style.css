@@ -740,6 +740,11 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	margin-bottom: 55px;
 }
 
+.item .main-container {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .item  h1 {
 	margin: 0;
 	margin-bottom: 21px;
@@ -756,12 +761,19 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	float: left;
 }
 
-.main_caption {							/* Большая картинка */
+.item .main_caption {							/* Большая картинка */
 	float: left;
-	padding-bottom: 13px;	/* ...Исправить. Если падинг указать 20 рх, то вылезает на деле почему-то больше (7рх лишние)... */
 	padding-left: 0;
 }
 
+.item .content p {
+	margin-bottom: 21px;
+}
+
+.item .miniatures {
+	padding: 0;
+	margin: 0;
+}
 /*.caption a:active .main_caption img{					/ такое не  работает... /
 	background: url("img/-item/big_image.jpeg") no-repeat;
 }*/
@@ -809,6 +821,7 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 }
 
 .item .text_box p {
+	margin-top: 0;
 	margin-bottom: 38px;
 }
 
@@ -860,7 +873,7 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 }
 
 .footnotes {
-	margin-top: 33px;
+	margin-top: 21px;
 	margin-bottom: 33px;
 }
 
