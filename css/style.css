@@ -1357,7 +1357,7 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 }*/
 
 .modal-container {
-	background-color: #aba9a7;
+	background: #aba9a7 url("../img/map_static.jpg") no-repeat center;
 	width: 100%; /*766px;*/
 	height: 100%; /*560px;*/
 	z-index: 1;
