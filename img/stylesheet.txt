@@ -1,0 +1,119 @@
+.sprite {
+	background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-block_bg {
+    width: 50px;
+    height: 50px;
+    background-position: -5px -5px;
+}
+
+.sprite-check_on {
+    width: 12px;
+    height: 12px;
+    background-position: -65px -5px;
+}
+
+.sprite-close_btn {
+    width: 12px;
+    height: 12px;
+    background-position: -87px -5px;
+}
+
+.sprite-close_window {
+    width: 21px;
+    height: 21px;
+    background-position: -109px -5px;
+}
+
+.sprite-footer_bg {
+    width: 50px;
+    height: 50px;
+    background-position: -140px -5px;
+}
+
+.sprite-icon_enter {
+    width: 18px;
+    height: 16px;
+    background-position: -200px -5px;
+}
+
+.sprite-icon_enter2 {
+    width: 18px;
+    height: 16px;
+    background-position: -228px -5px;
+}
+
+.sprite-icon_fb {
+    width: 12px;
+    height: 22px;
+    background-position: -256px -5px;
+}
+
+.sprite-icon_fb_b {
+    width: 12px;
+    height: 22px;
+    background-position: -278px -5px;
+}
+
+.sprite-icon_inst {
+    width: 21px;
+    height: 21px;
+    background-position: -300px -5px;
+}
+
+.sprite-icon_inst_b {
+    width: 21px;
+    height: 21px;
+    background-position: -331px -5px;
+}
+
+.sprite-icon_login {
+    width: 15px;
+    height: 15px;
+    background-position: -65px -36px;
+}
+
+.sprite-icon_pass {
+    width: 15px;
+    height: 17px;
+    background-position: -90px -36px;
+}
+
+.sprite-icon_vk {
+    width: 25px;
+    height: 16px;
+    background-position: -200px -36px;
+}
+
+.sprite-icon_vk_b {
+    width: 25px;
+    height: 16px;
+    background-position: -300px -36px;
+}
+
+.sprite-logo {
+    width: 368px;
+    height: 152px;
+    background-position: -5px -65px;
+}
+
+.sprite-logo_header {
+    width: 111px;
+    height: 24px;
+    background-position: -5px -227px;
+}
+
+.sprite-radio_on {
+    width: 20px;
+    height: 20px;
+    background-position: -126px -227px;
+}
+
+.sprite-vert_line {
+    width: 6px;
+    height: 254px;
+    background-position: -383px -5px;
+}

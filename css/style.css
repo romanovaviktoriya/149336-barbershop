@@ -122,12 +122,13 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	left: 20px;
 	width: 18px;
 	height: 16px;
-	background: url("../img/icon_enter.png") no-repeat;
-	/*background-position: 0 -212px;*/
+	background: url("../img/spritesheet.png") no-repeat;
+	background-position: -200px -5px;
 }
 
 .login:hover:before {											/* Псевдоэлемент (картинка)ссылки пользовательского блока при наведении */
-	background: url("../img/icon_enter2.png") no-repeat;
+	background: url("../img/spritesheet.png") no-repeat;
+	background-position: -228px -5px;
 }
 
 /*-------------------------------------------------------------*/
@@ -538,7 +539,8 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	top: 2px;
 	width: 12px;
 	height: 12px;
-	background: url("../img/check_on.png") no-repeat center;
+	background: url("../img/spritesheet.png") no-repeat center;
+	background-position: -65px -5px;
 	border: 2px solid #fff;
 	box-shadow: 0 0 0 2px rgba(0,0,0,1);
 }
@@ -774,9 +776,6 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	padding: 0;
 	margin: 0;
 }
-/*.caption a:active .main_caption img{					/ такое не  работает... /
-	background: url("img/-item/big_image.jpeg") no-repeat;
-}*/
 
 .main_caption img, .caption img {		/* Тень изображениям (большому и двум маленьким) */
 	box-shadow: 0 0 25px rgba(0,0,0,0.3);
@@ -1072,36 +1071,63 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	height: 43px;
 	font-size: 0;
 	text-decoration: none;
-	background: #000 url("../img/sprite.png") no-repeat center;								/* Подключить спрайт и далее расставить координаты картинок! */
+	background-color: #000; 
+	position: relative;
+}
+
+.social-btn:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: url("../img/spritesheet.png") no-repeat;
 }
 
 .social-btn:hover {						/* Социальные кнопки в футере при наведении */
 	background-color: #fff;
 }
 
-.social-btn-vk {						/* Социальная кнопка ВК футера */
-	background: #000 url("../img/icon_vk.png") no-repeat center;
-	/*background-position: 9px -968px;*/
+.social-btn-vk:before {						/* Социальная кнопка ВК футера */
+	/*background: #000 url("../img/icon_vk.png") no-repeat center;*/
+	width: 25px;
+    height: 16px;
+	background-position: -200px -36px;
 }
 
-.social-btn-fb {						/* Социальная кнопка FB футера */
-	background: #000 url("../img/icon_fb.png") no-repeat center;
+.social-btn-fb:before {						/* Социальная кнопка FB футера */
+	/*background: #000 url("../img/icon_fb.png") no-repeat center;*/
+	width: 12px;
+    height: 22px;
+    background-position: -256px -5px;
 }
 
-.social-btn-inst {						/* Социальная кнопка INST футера */
-	background: #000 url("../img/icon_inst.png") no-repeat center;
+.social-btn-inst:before {						/* Социальная кнопка INST футера */
+	/*background: #000 url("../img/icon_inst.png") no-repeat center;*/
+	width: 21px;
+    height: 21px;
+    background-position: -300px -5px;
 }
 
-.social-btn-vk:hover {						/* Социальная кнопка ВК футера при наведении */
-	background: #fff url("../img/icon_vk_b.png") no-repeat center;
+.social-btn-vk:hover:before {						/* Социальная кнопка ВК футера при наведении */
+	/*background: #fff url("../img/icon_vk_b.png") no-repeat center;*/
+	width: 25px;
+    height: 16px;
+    background-position: -300px -36px;
 }
 
-.social-btn-fb:hover {						/* Социальная кнопка FB футера при наведении */
-	background: #fff url("../img/icon_fb_b.png") no-repeat center;
+.social-btn-fb:hover:before {						/* Социальная кнопка FB футера при наведении */
+	/*background: #fff url("../img/icon_fb_b.png") no-repeat center;*/
+	width: 12px;
+    height: 22px;
+    background-position: -278px -5px;
 }
 
-.social-btn-inst:hover {						/* Социальная кнопка INST футера при наведении */
-	background: #fff url("../img/icon_inst_b.png") no-repeat center;
+.social-btn-inst:hover:before {						/* Социальная кнопка INST футера при наведении */
+	/*background: #fff url("../img/icon_inst_b.png") no-repeat center;*/
+	width: 21px;
+    height: 21px;
+    background-position: -331px -5px;
 }
 
 .footer-copyright p {					/* Абзац блока копирайта футера */
@@ -1154,7 +1180,8 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	right: -34px;
 	width: 21px;
 	height: 21px;
-	background: url("../img/close_window.png") no-repeat center;
+	background: url("../img/spritesheet.png") no-repeat center;
+    background-position: -109px -5px;
 	font-size: 0;
 	cursor: pointer;
 }
@@ -1172,7 +1199,7 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 }
 
 .modal-window .login-form {		/* Форма */
-	
+	position: relative;
 }
 
 .login-form input[type="text"], .login-form input[type="password"] {	/* Поля формы входа (логин и пароль) */
@@ -1238,8 +1265,17 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	border: 2px solid #000;
 }
 
-.login-form input[type="checkbox"]:checked + label:before {		/* Псевдоэлемент при нажатом чекбоксе */
-	background: url("../img/close_btn.png") no-repeat center;
+.login-form input[type="checkbox"]:checked + label:after {		/* Псевдоэлемент при нажатом чекбоксе */
+	/*background: url("../img/close_btn.png") no-repeat center;*/
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 4px;
+	background-image: url("../img/spritesheet.png");
+	background-repeat: no-repeat;
+	width: 12px;
+    height: 12px;
+    background-position: -87px -5px;
 }
 
 .modal-content-map {
@@ -1263,7 +1299,10 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	right: -32px;
 	width: 21px;
 	height: 21px;
-	background: url("../img/close_window.png") no-repeat center;
+	/*background: url("../img/close_window.png") no-repeat center;*/
+	background-image: url("../img/spritesheet.png");
+	background-repeat: no-repeat;
+    background-position: -109px -5px;
 	font-size: 0;
 	cursor: pointer;
 	
@@ -1332,29 +1371,6 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 .modal-error {		/* Ошибка входа (не хватает логина и/или пароля) */
 	animation: error 2s;
 }
-
-/*.modal-show-sec {			/* Альтернативное отображение модального окна */
-	/*display: block;
-	animation: modal-show-sec .5s ease-in-out;		
-}
-
-@keyframes modal-show-sec {		/* Кадры альтернативной анимации открытия Модального окна */
-	/*0% {
-		transform: scale(0);
-		opacity: 0.0;		
-	}
-	60% {
-		transform: scale(1.1);	
-	}
-	80% {
-		transform: scale(0.9);
-		opacity: 1;	
-	}	
-	100% {
-		transform: scale(1);
-		opacity: 1;	
-	}		
-}*/
 
 .modal-container {
 	background: #aba9a7 url("../img/map_static.jpg") no-repeat center;
