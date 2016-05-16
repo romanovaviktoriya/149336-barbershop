@@ -641,7 +641,7 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 	margin-bottom: 20px;
 }
 
-.shop .product-item:active {
+.shop .product-item:hover {
 	box-shadow: 5px 5px 25px rgba(0,0,0,.3);
 }
 
@@ -927,11 +927,17 @@ body.shop, body.item, body.inner_page {					/* Тело внутренних с�
 
 .inner-content table {
 	border-collapse: collapse;
+	width: 100%;
 }
 
 .inner-content td {
 	padding: 10px 15px;
 	border: 2px solid black;
+	width: 50%;
+}
+
+.inner-content tr td:nth-child(2) {
+	text-align: center;
 }
 
 .big-header {
